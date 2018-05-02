@@ -12,4 +12,5 @@ RUN mkdir /ftp/
 EXPOSE 21
 EXPOSE 20
 
-CMD ["proftpd", "--nodaemon", "-c", "/etc/proftpd/proftpd.conf"]
+ENTRYPOINT ["proftpd", "--nodaemon", "-c"]
+CMD ["/etc/proftpd/proftpd.conf"]
